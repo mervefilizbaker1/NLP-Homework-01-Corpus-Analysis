@@ -74,7 +74,7 @@ Tested three variations to optimize results:
 - Same vocabulary size (2,547 words)
 - Result: More balanced distributions but poor category separation
 
-**Experiment 3: Aggressive Stopword Filtering** ⭐ **BEST**
+**Experiment 3: Aggressive Stopword Filtering** **BEST**
 - Removed 100+ character names manually
 - Stricter parameters: `min_df=10`, `max_df=0.7`, `min_length=3`
 - Vocabulary reduced to 1,209 words
