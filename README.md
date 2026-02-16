@@ -193,7 +193,7 @@ All outputs (tables, statistics, comparisons) are displayed directly in `hw.ipyn
 
 ## Author
 
-[Merve Filiz Baker]
+Merve Filiz Baker
 
 ## License
 
