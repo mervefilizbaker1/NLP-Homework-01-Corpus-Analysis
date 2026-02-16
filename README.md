@@ -51,7 +51,6 @@ Each film script was split into smaller blocks (paragraphs/scenes) to create suf
 ```
   llr(w, c) = log(P(w|c)) - log(P(w|Co))
 ```
-- Used Fightin' Words method (Log Odds Ratio with Dirichlet Prior)
 - Identified top 10 distinctive words per category
 
 ### 4. Topic Modeling (LDA)
