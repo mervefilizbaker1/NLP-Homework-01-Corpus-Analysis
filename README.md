@@ -146,30 +146,42 @@ pip install -r requirements.txt
 
 ## Usage
 
-### 1. Data Collection
-```python
-python scripts/01_data_collection.py
-```
+### Step 1: Data Collection
+Open and run `get_data.ipynb`:
+- Downloads 10 movie scripts from IMSDb using web scraping
+- Splits each script into paragraph-level blocks
+- Organizes blocks into category folders:
+  - `corpus/romantic_blocks/` (5,382 documents)
+  - `corpus/scifi_blocks/` (6,038 documents)
 
-### 2. Create Bag-of-Words
-```python
-python scripts/02_preprocessing.py
-```
+### Step 2: Analysis
+Open and run `hw.ipynb`:
 
-### 3. Run Naive Bayes Analysis
-```python
-python scripts/03_naive_bayes.py
-```
+**Section 2.2 - Bag-of-Words:**
+- Loads documents from corpus folders
+- Creates sparse BOW matrix with CountVectorizer
+- Saves processed data to `processed_data/`
 
-### 4. Run Topic Modeling
-```python
-python scripts/04_topic_modeling.py
-```
+**Section 2.3 - Naive Bayes:**
+- Computes P(w|c) with add-one smoothing
+- Calculates Log-Likelihood Ratios
+- Applies Fightin' Words method
+- Identifies top 10 distinctive words per category
 
-### 5. Run Experiments
-```python
-python scripts/05_experiments.py
-```
+**Section 2.4 - Topic Modeling:**
+- Runs LDA with 10 topics
+- Generates topic-word distributions
+- Computes category-topic distributions
+- Reports top 5 topics per category
+
+**Section 2.5 - Experimentation:**
+- Experiment 1: Stemming
+- Experiment 2: TF-IDF
+- Experiment 3: Aggressive stopword filtering
+- Compares all approaches and selects best configuration
+
+### Step 3: View Results
+All outputs (tables, statistics, comparisons) are displayed directly in `hw.ipynb`
 
 ## Future Improvements
 
@@ -179,14 +191,9 @@ python scripts/05_experiments.py
 4. **Bigrams/Trigrams:** Capture multi-word expressions (e.g., "outer space")
 5. **Coherence Optimization:** Systematically optimize number of topics using coherence scores
 
-## References
-
-- Monroe, B. L., Colaresi, M. P., & Quinn, K. M. (2008). Fightin' words: Lexical feature selection and evaluation for identifying the content of political conflict. *Political Analysis*, 16(4), 372-403.
-- Blei, D. M., Ng, A. Y., & Jordan, M. I. (2003). Latent dirichlet allocation. *Journal of Machine Learning Research*, 3, 993-1022.
-
 ## Author
 
-[Your Name]
+[Merve Filiz Baker]
 
 ## License
 
